@@ -31,7 +31,10 @@
                     "True": "pwd"
                   },
                   {
-                    "True": "sudo docker service ls"
+                    "True": "sudo docker node ls"
+                  },
+                  {
+                    "False": "sudo docker service ls"
                   },
                   {
                     "True": "exit"
