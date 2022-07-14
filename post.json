@@ -31,7 +31,7 @@
                     "True": "whoami"
                   },
                   {
-                    "False": "pwd"
+                    "True": "pwd"
                   },
                   {
                     "False": "sudo docker node ls"
