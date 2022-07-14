@@ -28,10 +28,13 @@
                     }
                   },
                   {
-                    "True": "pwd"
+                    "True": "whoami"
                   },
                   {
-                    "True": "sudo docker node ls"
+                    "False": "pwd"
+                  },
+                  {
+                    "False": "sudo docker node ls"
                   },
                   {
                     "False": "sudo docker service ls"
