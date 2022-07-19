@@ -13,23 +13,19 @@
             "ip": "http://corp.paglipay.info:5003/start",
             "jobs": [
               {
-                "import": "ParamikoObj"
+                "import": "Key"
               },
               {
                 "True": [
                   {
-                    "wait": 11
+                    "import": "ParamikoObj"
                   },
                   {
-                    "json/paramiko/check_paramiko.json": [
-                      {
-                        "open": {
-                          "ip": "192.168.2.81",
-                          "username": "vagrant",
-                          "password": "vagrant"
-                        }
-                      }
-                    ]
+                    "open": {
+                      "ip": "192.168.2.81",
+                      "username": "vagrant",
+                      "password": "vagrant"
+                    }
                   },
                   {
                     "True": "whoami"
@@ -41,89 +37,11 @@
                     "True": "sudo docker node ls"
                   },
                   {
-                    "wait": 3
+                    "True": "sudo docker service ls"
                   },
                   {
-                    "False": [
-                      {
-                        "wait": 11
-                      },
-                      "ssh paglipay@drawbridge.noc.ucla.edu",
-                      {
-                        "wait": 3
-                      },
-                      {
-                        "(yes/no)": "yes"
-                      },
-                      {
-                        "PASSCODE": "26558503702"
-                      }
-                    ]
-                  },
-                  {
-                    "False": [
-                      {
-                        "gw-": [
-                          "ssh mon-asm1.noc.ucla.edu",
-                          {
-                            "mon-": [
-                              "whoami",
-                              {
-                                "paglipay": [
-                                  "pwd",
-                                  {
-                                    "/home/paglipay": [
-                                      "ls",
-                                      {
-                                        "gather": [
-                                          "cp -r /opt/gather/bin ~/gather/",
-                                          "cp -r /opt/gather/etc ~/gather/",
-                                          "cp -r /opt/gather/libexec ~/gather/"
-                                        ]
-                                      },
-                                      "cd ~/gather",
-                                      "ls -la",
-                                      {
-                                        "git": [
-                                          "git add . && git status",
-                                          "git commit -m 'test' && git status && git push origin master",
-                                          {
-                                            "Username": [
-                                              {
-                                                "wait": 3
-                                              },
-                                              "paglipay@gmail.com",
-                                              {
-                                                "wait": 3
-                                              },
-                                              {
-                                                "Password": "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"
-                                              }
-                                            ]
-                                          }
-                                        ]
-                                      }
-                                    ]
-                                  }
-                                ]
-                              },
-                              {
-                                "mon-": "exit"
-                              }
-                            ]
-                          },
-                          {
-                            "gw-": "exit"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  [
-                    {
-                      "doc": "exit"
-                    }
-                  ]
+                    "True": "exit"
+                  }
                 ]
               }
             ]
