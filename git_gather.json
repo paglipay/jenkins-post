@@ -39,7 +39,9 @@
                 {
                   "(yes/no)": "yes"
                 },
-                "json/paramiko/passcode.json"
+                {
+                  "PASSCODE": "26558"
+                }
               ]
             },
             {
