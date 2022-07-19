@@ -40,14 +40,28 @@
                         "(yes/no)": "yes"
                       },
                       {
-                        "PASSCODE": "26558278308"
+                        "PASSCODE": "26558344222"
                       },
                       {
                         "True": [
                           {
                             "gw-": [
                               "ssh mon-asm1.noc.ucla.edu",
-                              "ls -la",
+                              "cd ./gather && echo test >> text.txt && git add . && git commit -m 'test' && git push origin master",
+                              {
+                                "Username": [
+                                  {
+                                    "wait": 3
+                                  },
+                                  "paglipay@gmail.com",
+                                  {
+                                    "wait": 3
+                                  },
+                                  {
+                                    "Password": "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"
+                                  }
+                                ]
+                              },
                               {
                                 "True": "exit"
                               }
