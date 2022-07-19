@@ -32,10 +32,19 @@
                     ]
                   },
                   {
+                    "True": "whoami"
+                  },
+                  {
+                    "True": "pwd"
+                  },
+                  {
+                    "True": "sudo docker node ls"
+                  },
+                  {
                     "wait": 3
                   },
                   {
-                    "True": [
+                    "False": [
                       {
                         "wait": 11
                       },
@@ -52,7 +61,7 @@
                     ]
                   },
                   {
-                    "True": [
+                    "False": [
                       {
                         "gw-": [
                           "ssh mon-asm1.noc.ucla.edu",
