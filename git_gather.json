@@ -28,16 +28,27 @@
                     }
                   },
                   {
+                    "True": [
+                      {
+                        "wait": 11
+                      },
+                      "ssh paglipay@drawbridge.noc.ucla.edu",
+                      {
+                        "wait": 3
+                      },
+                      {
+                        "(yes/no)": "yes"
+                      },
+                      {
+                        "PASSCODE": "26558951615"
+                      }
+                    ]
+                  },
+                  {
                     "True": "whoami"
                   },
                   {
-                    "True": "pwd"
-                  },
-                  {
-                    "True": "sudo docker node ls"
-                  },
-                  {
-                    "True": "sudo docker service ls"
+                    "True": "exit"
                   },
                   {
                     "True": "exit"
