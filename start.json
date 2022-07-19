@@ -1,1 +1,5 @@
-test1
+[
+  { "import": "Key" },
+  { "True": "./post.json" },
+  { "False": "./git_gather.json" }
+]
