@@ -40,30 +40,12 @@
                         "(yes/no)": "yes"
                       },
                       {
-                        "PASSCODE": "26558600597"
+                        "PASSCODE": "26558512797"
                       },
                       {
-                        "False": "whoami"
+                        "True": "whoami"
                       },
-                      {
-                        "True": [
-                          {
-                            "gw-": [
-                              "ssh mon-asm1.noc.ucla.edu",
-                              {
-                                "mon-": [
-                                  "pwd"
-                                  ]
-                                  },
-                                  {
-                                    "mon-": "exit"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      },
+                      
                       {
                         "True": "exit"
                       }
