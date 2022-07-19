@@ -40,10 +40,10 @@
                         "(yes/no)": "yes"
                       },
                       {
-                        "PASSCODE": "26558172817"
+                        "PASSCODE": "26558278308"
                       },
                       {
-                        "False": [
+                        "True": [
                           {
                             "gw-": [
                               "ssh mon-asm1.noc.ucla.edu",
