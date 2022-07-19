@@ -40,15 +40,66 @@
                         "(yes/no)": "yes"
                       },
                       {
-                        "PASSCODE": "26558951615"
+                        "PASSCODE": "26558448132"
+                      },
+                      {
+                        "False": "whoami"
+                      },
+                      {
+                        "True": [
+                          {
+                            "gw-": [
+                              "ssh mon-asm1.noc.ucla.edu",
+                              {
+                                "mon-": [
+                                  "pwd",
+                                  {
+                                    "/home/paglipay": [
+                                      "ls",
+                                      {
+                                        "gather": [
+                                          "cp -r /opt/gather/bin ~/gather/",
+                                          "cp -r /opt/gather/etc ~/gather/",
+                                          "cp -r /opt/gather/libexec ~/gather/"
+                                        ]
+                                      },
+                                      "cd ~/gather",
+                                      "ls -la",
+                                      {
+                                        "git": [
+                                          "git add . && git status",
+                                          "git commit -m 'test' && git status && git push origin master",
+                                          {
+                                            "Username": [
+                                              {
+                                                "wait": 3
+                                              },
+                                              "paglipay@gmail.com",
+                                              {
+                                                "wait": 3
+                                              },
+                                              {
+                                                "Password": "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"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "mon-": "exit"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "True": "exit"
                       }
                     ]
-                  },
-                  {
-                    "True": "whoami"
-                  },
-                  {
-                    "True": "exit"
                   },
                   {
                     "True": "exit"
