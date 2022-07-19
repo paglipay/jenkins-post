@@ -30,7 +30,7 @@
                   {
                     "True": [
                       {
-                        "wait": 11
+                        "wait": 6
                       },
                       "ssh paglipay@drawbridge.noc.ucla.edu",
                       {
@@ -40,7 +40,7 @@
                         "(yes/no)": "yes"
                       },
                       {
-                        "PASSCODE": "26558774724"
+                        "PASSCODE": "26558172817"
                       },
                       {
                         "False": [
@@ -55,7 +55,6 @@
                           }
                         ]
                       },
-                      "ls -la",
                       {
                         "True": "exit"
                       }
