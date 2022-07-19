@@ -6,110 +6,122 @@
     {
       "True": [
         {
-          "import": "ParamikoObj"
+          "import": "RequestsObj"
         },
         {
-          "True": [
-            {
-              "wait": 11
-            },
-            {
-              "json/paramiko/check_paramiko.json": [
-                {
-                  "open": {
-                    "ip": "192.168.2.81",
-                    "username": "vagrant",
-                    "password": "vagrant"
-                  }
-                }
-              ]
-            },
-            {
-              "wait": 3
-            },
-            {
-              "True": [
-                {
-                  "wait": 11
-                },
-                "ssh paglipay@drawbridge.noc.ucla.edu",
-                {
-                  "wait": 3
-                },
-                {
-                  "(yes/no)": "yes"
-                },
-                {
-                  "PASSCODE": "26558918802"
-                }
-              ]
-            },
-            {
-              "True": [
-                {
-                  "gw-": [
-                    "ssh mon-asm1.noc.ucla.edu",
-                    {
-                      "mon-": [
-                        "whoami",
-                        {
-                          "paglipay": [
-                            "pwd",
-                            {
-                              "/home/paglipay": [
-                                "ls",
-                                {
-                                  "gather": [
-                                    "cp -r /opt/gather/bin ~/gather/",
-                                    "cp -r /opt/gather/etc ~/gather/",
-                                    "cp -r /opt/gather/libexec ~/gather/",
-                                    "echo 20220719-1 >> ~/gather/test.txt"
-                                  ]
-                                },
-                                "cd ~/gather",
-                                "ls -la",
-                                {
-                                  "git": [
-                                    "git add . && git status",
-                                    "git commit -m 'test' && git status && git push origin master",
-                                    {
-                                      "Username": [
-                                        {
-                                          "wait": 3
-                                        },
-                                        "paglipay@gmail.com",
-                                        {
-                                          "wait": 3
-                                        },
-                                        {
-                                          "Password": "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"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "mon-": "exit"
+          "open": {
+            "ip": "http://corp.paglipay.info:5003/start",
+            "jobs": [
+              {
+                "import": "ParamikoObj"
+              },
+              {
+                "True": [
+                  {
+                    "wait": 11
+                  },
+                  {
+                    "json/paramiko/check_paramiko.json": [
+                      {
+                        "open": {
+                          "ip": "192.168.2.81",
+                          "username": "vagrant",
+                          "password": "vagrant"
                         }
-                      ]
-                    },
+                      }
+                    ]
+                  },
+                  {
+                    "wait": 3
+                  },
+                  {
+                    "True": [
+                      {
+                        "wait": 11
+                      },
+                      "ssh paglipay@drawbridge.noc.ucla.edu",
+                      {
+                        "wait": 3
+                      },
+                      {
+                        "(yes/no)": "yes"
+                      },
+                      {
+                        "PASSCODE": "26558503702"
+                      }
+                    ]
+                  },
+                  {
+                    "True": [
+                      {
+                        "gw-": [
+                          "ssh mon-asm1.noc.ucla.edu",
+                          {
+                            "mon-": [
+                              "whoami",
+                              {
+                                "paglipay": [
+                                  "pwd",
+                                  {
+                                    "/home/paglipay": [
+                                      "ls",
+                                      {
+                                        "gather": [
+                                          "cp -r /opt/gather/bin ~/gather/",
+                                          "cp -r /opt/gather/etc ~/gather/",
+                                          "cp -r /opt/gather/libexec ~/gather/"
+                                        ]
+                                      },
+                                      "cd ~/gather",
+                                      "ls -la",
+                                      {
+                                        "git": [
+                                          "git add . && git status",
+                                          "git commit -m 'test' && git status && git push origin master",
+                                          {
+                                            "Username": [
+                                              {
+                                                "wait": 3
+                                              },
+                                              "paglipay@gmail.com",
+                                              {
+                                                "wait": 3
+                                              },
+                                              {
+                                                "Password": "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"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "mon-": "exit"
+                              }
+                            ]
+                          },
+                          {
+                            "gw-": "exit"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  [
                     {
-                      "gw-": "exit"
+                      "doc": "exit"
                     }
                   ]
-                }
-              ]
-            },
-            [
-              {
-                "doc": "exit"
+                ]
               }
             ]
-          ]
+          }
+        },
+        {
+          "True": "end"
         }
       ]
     }
