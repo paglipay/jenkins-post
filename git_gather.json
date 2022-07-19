@@ -40,7 +40,7 @@
                         "(yes/no)": "yes"
                       },
                       {
-                        "PASSCODE": "26558805510"
+                        "PASSCODE": "26558406964"
                       },
                       {
                         "True": [
@@ -55,7 +55,7 @@
                                   },
                                   "paglipay@gmail.com",
                                   {
-                                    "wait": 3
+                                    "wait": 11
                                   },
                                   {
                                     "Password": "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"
