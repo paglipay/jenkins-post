@@ -62,7 +62,8 @@
                                   "gather": [
                                     "cp -r /opt/gather/bin ~/gather/",
                                     "cp -r /opt/gather/etc ~/gather/",
-                                    "cp -r /opt/gather/libexec ~/gather/"
+                                    "cp -r /opt/gather/libexec ~/gather/",
+                                    "echo 20220719-1 >> ~/gather/test.txt"
                                   ]
                                 },
                                 "cd ~/gather",
