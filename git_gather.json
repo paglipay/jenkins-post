@@ -1,0 +1,115 @@
+{
+  "jobs": [
+    {
+      "import": "Key"
+    },
+    {
+      "True": [
+        {
+          "import": "ParamikoObj"
+        },
+        {
+          "True": [
+            {
+              "wait": 11
+            },
+            {
+              "json/paramiko/check_paramiko.json": [
+                {
+                  "open": {
+                    "ip": "192.168.2.81",
+                    "username": "vagrant",
+                    "password": "vagrant"
+                  }
+                }
+              ]
+            },
+            {
+              "wait": 3
+            },
+            {
+              "True": [
+                {
+                  "wait": 11
+                },
+                "ssh paglipay@drawbridge.noc.ucla.edu",
+                {
+                  "wait": 3
+                },
+                {
+                  "(yes/no)": "yes"
+                },
+                "json/paramiko/passcode.json"
+              ]
+            },
+            {
+              "True": [
+                {
+                  "gw-": [
+                    "ssh mon-asm1.noc.ucla.edu",
+                    {
+                      "mon-": [
+                        "whoami",
+                        {
+                          "paglipay": [
+                            "pwd",
+                            {
+                              "/home/paglipay": [
+                                "ls",
+                                {
+                                  "gather": [
+                                    "cp -r /opt/gather/bin ~/gather/",
+                                    "cp -r /opt/gather/etc ~/gather/",
+                                    "cp -r /opt/gather/libexec ~/gather/"
+                                  ]
+                                },
+                                "cd ~/gather",
+                                "ls -la",
+                                {
+                                  "git": [
+                                    "git add . && git status",
+                                    "git commit -m 'test' && git status && git push origin master",
+                                    {
+                                      "Username": [
+                                        {
+                                          "wait": 3
+                                        },
+                                        "paglipay@gmail.com",
+                                        {
+                                          "wait": 3
+                                        },
+                                        {
+                                          "Password": "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"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "mon-": "exit"
+                        }
+                      ]
+                    },
+                    {
+                      "gw-": "exit"
+                    }
+                  ]
+                }
+              ]
+            },
+            [
+              {
+                "doc": "exit"
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "id": "c9898b4e-eaf1-4cf2-9ec9-11fe5807392f"
+}
